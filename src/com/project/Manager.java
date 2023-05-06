@@ -10,6 +10,10 @@ public class Manager extends User {
 
 	}
 
+	public Manager() {
+		setUserRole(EUserRole.MANAGER);
+	}
+
 	public Restaurant getRestaurant() {
 		return restaurant;
 	}

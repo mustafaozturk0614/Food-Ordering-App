@@ -1,5 +1,7 @@
 package com.project;
 
+import java.util.Scanner;
+
 public abstract class User implements IProfile<User> {
 
 	private String name;
@@ -9,6 +11,10 @@ public abstract class User implements IProfile<User> {
 	private String password;
 	private String phone;
 	private EUserRole userRole;
+
+	public User() {
+
+	}
 
 	public User(String name, String surName, String username, String email, String password, String phone) {
 		super();
@@ -90,7 +96,21 @@ public abstract class User implements IProfile<User> {
 	@Override
 	public User registerInformation() {
 
-		return null;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Lütfen kullanıcı isminizi giriniz");
+		this.username = scanner.nextLine();
+		System.out.println("Lütfen isminizi giriniz");
+		this.name = scanner.nextLine();
+		System.out.println("Lütfen soy isiminizi giriniz");
+		this.surName = scanner.nextLine();
+		System.out.println("Lütfen email adresinizi giriniz");
+		this.email = scanner.nextLine();
+		System.out.println("Lütfen telefon numaranızı giriniz");
+		this.phone = scanner.nextLine();
+		System.out.println("Lütfen şifrenizi giriniz giriniz");
+		this.password = scanner.nextLine();
+
+		return this;
 	}
 
 }

@@ -14,6 +14,11 @@ public class Customer extends User {
 
 	}
 
+	public Customer() {
+		this.cart = new Cart();
+		setUserRole(EUserRole.CUSTOMER);
+	}
+
 	public Cart getCart() {
 		return cart;
 	}
